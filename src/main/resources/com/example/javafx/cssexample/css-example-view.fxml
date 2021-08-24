@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafx.cssexample.CssExampleController" hgap="10" vgap="10"
+          stylesheets="@style.css"
+          fx:id="gridPane">
+
+    <Button text="Open" GridPane.rowIndex="0" GridPane.columnIndex="0"
+        onAction="#openFileChooser"/>
+    <Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"
+        id="greenbutton"/>
+
+    <Button text="Button Three" GridPane.rowIndex="0" GridPane.columnIndex="2"
+        id="redbutton"/>
+
+    <Button text="Button Four" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+    <Button text="Button Five" GridPane.rowIndex="0" GridPane.columnIndex="4"
+        id="redbutton"/>
+
+    <Label text="Test transformation label"
+        fx:id="transformedLabel"
+        GridPane.rowIndex="1" GridPane.columnIndex="0" rotate="90"
+        onMouseEntered="#onMouseEnteredLabel"
+        onMouseExited="#onMouseExitedLabel">
+    </Label>
+</GridPane>
