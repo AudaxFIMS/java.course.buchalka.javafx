@@ -5,7 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
+
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class CssExampleController {
 	@FXML
@@ -13,6 +20,9 @@ public class CssExampleController {
 	
 	@FXML
 	private GridPane gridPane;
+	
+	@FXML
+	WebView webView;
 	
 	@FXML
 	public void onMouseEnteredLabel(MouseEvent mouseEvent) {
@@ -32,4 +42,21 @@ public class CssExampleController {
 		
 		chooser.showOpenDialog(gridPane.getScene().getWindow());
 	}
+	
+	@FXML
+	public void handleHLClick(ActionEvent actionEvent) {
+		/*System.out.println("The link was clicked!");
+		try {
+			Desktop.getDesktop().browse(new URI("http://www.javafx.com"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}*/
+		WebEngine webEngine = webView.getEngine();
+		
+		webEngine.load("http://www.javafx.com");
+	}
+	
+	
 }

@@ -9,6 +9,7 @@ module com.example.javafx {
 	requires org.kordamp.ikonli.javafx;
 	requires org.kordamp.bootstrapfx.core;
 	requires eu.hansolo.tilesfx;
+	requires java.desktop;
 	//----------------------------------------------------------------
 	exports com.example.javafx.samples;
 	opens com.example.javafx.samples to javafx.fxml;
@@ -24,5 +25,8 @@ module com.example.javafx {
 	//----------------------------------------------------------------
 	exports com.example.javafx.todolist.controller;
 	opens com.example.javafx.todolist.controller to javafx.fxml;
-	
+	//----------------------------------------------------------------
+	exports com.example.javafx.challange;
+	opens com.example.javafx.challange to javafx.fxml;
+	opens com.example.javafx.challange.datamodel to javafx.base;
 }
